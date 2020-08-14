@@ -1,0 +1,72 @@
+# Project: Sketchpad
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = output/Sketchpad_private.res
+OBJ      = output/cipher.o output/functiondisplay.o output/MYGUI.o output/standard.o output/Sketchpad.o output/exceptio.o output/genlib.o output/graphics.o output/random.o output/simpio.o output/strlib.o output/imgui.o output/break_continue.o output/linkedlist.o $(RES)
+LINKOBJ  = output/cipher.o output/functiondisplay.o output/MYGUI.o output/standard.o output/Sketchpad.o output/exceptio.o output/genlib.o output/graphics.o output/random.o output/simpio.o output/strlib.o output/imgui.o output/break_continue.o output/linkedlist.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -L"../Sketchpad/Lib" -mwindows -lwinmm  -mwindows -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"../Sketchpad/simpleGUI" -I"../Sketchpad" -I"../Sketchpad/libgraphics" -I"../Sketchpad/myCode"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++" -I"../Sketchpad/simpleGUI" -I"../Sketchpad" -I"../Sketchpad/libgraphics" -I"../Sketchpad/myCode"
+BIN      = Sketchpad/Sketchpad.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+output/cipher.o: myCode/cipher.c
+	$(CC) -c myCode/cipher.c -o output/cipher.o $(CFLAGS)
+
+output/functiondisplay.o: myCode/functiondisplay.c
+	$(CC) -c myCode/functiondisplay.c -o output/functiondisplay.o $(CFLAGS)
+
+output/MYGUI.o: myCode/MYGUI.c
+	$(CC) -c myCode/MYGUI.c -o output/MYGUI.o $(CFLAGS)
+
+output/standard.o: myCode/standard.c
+	$(CC) -c myCode/standard.c -o output/standard.o $(CFLAGS)
+
+output/Sketchpad.o: Sketchpad.c
+	$(CC) -c Sketchpad.c -o output/Sketchpad.o $(CFLAGS)
+
+output/exceptio.o: libgraphics/exceptio.c
+	$(CC) -c libgraphics/exceptio.c -o output/exceptio.o $(CFLAGS)
+
+output/genlib.o: libgraphics/genlib.c
+	$(CC) -c libgraphics/genlib.c -o output/genlib.o $(CFLAGS)
+
+output/graphics.o: libgraphics/graphics.c
+	$(CC) -c libgraphics/graphics.c -o output/graphics.o $(CFLAGS)
+
+output/random.o: libgraphics/random.c
+	$(CC) -c libgraphics/random.c -o output/random.o $(CFLAGS)
+
+output/simpio.o: libgraphics/simpio.c
+	$(CC) -c libgraphics/simpio.c -o output/simpio.o $(CFLAGS)
+
+output/strlib.o: libgraphics/strlib.c
+	$(CC) -c libgraphics/strlib.c -o output/strlib.o $(CFLAGS)
+
+output/imgui.o: simpleGUI/imgui.c
+	$(CC) -c simpleGUI/imgui.c -o output/imgui.o $(CFLAGS)
+
+output/break_continue.o: myCode/break_continue.c
+	$(CC) -c myCode/break_continue.c -o output/break_continue.o $(CFLAGS)
+
+output/linkedlist.o: libgraphics/linkedlist.c
+	$(CC) -c libgraphics/linkedlist.c -o output/linkedlist.o $(CFLAGS)
+
+output/Sketchpad_private.res: Sketchpad_private.rc 
+	$(WINDRES) -i Sketchpad_private.rc --input-format=rc -o output/Sketchpad_private.res -O coff 
+
