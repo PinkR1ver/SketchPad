@@ -2,4 +2,8 @@
 * Sketchpad is my first projetcs after I entering the college.
 * Sketchpad can draw image of polynomial function.
 * Sketchpad uses the 2019 New York Fashion Week colors to decorate the UI.
-* Sketchpad has a very easy software protection, you should read the the readme.txt in the text_MustReadMe folder.
+## Notice
+* Please run deciphering.exe in .\Sketchpad\ciphertext to unlock
+* F5 will help you to return after drawing the image.
+* Can draw a lot of images
+* Press VK_UP and other four keys to move and view the image
