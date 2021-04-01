@@ -22,3 +22,14 @@ wine deciphering.exe
 ```
 ### Main Interface
 ![Main Interface](/figs/MainInterface.jpg)
+
+### Draw Interface
+![Draw Interface](/figs/DrawInterface.jpg)
+* We use visual keyboard to input polynomial funtion to draw its image.
+</br>
+![Function Image](/figs/FunctionImage.jpg)
+* It have image memorys and can draw different function images at the same time.
+
+### Others
+* It can also do derivative and calculus in the Tool menus.
+* Even more, it can play music by button in the bottom right corner of the interface.:-D
