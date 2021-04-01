@@ -20,3 +20,5 @@ sudo apt-get install wine
 cd Sketchpad/ciphertext/
 wine deciphering.exe
 ```
+### Main Interface
+![Main Interface](/figs/MainInterface.jpg)
