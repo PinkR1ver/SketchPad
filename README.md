@@ -6,3 +6,17 @@
 * Please run deciphering.exe in .\Sketchpad\ciphertext to unlock
 * F5 will help you to return after drawing the image.
 * Press VK_UP and other four keys to move and view the image
+## How to use sketchpad
+### Decipher
+#### Windows
+* Just run .\Sketchpad\deciphering.exe
+#### Linux
+* You need have wine first.
+```
+sudo apt-get install wine
+```
+* Then:
+```
+cd Sketchpad/ciphertext/
+wine deciphering.exe
+```
