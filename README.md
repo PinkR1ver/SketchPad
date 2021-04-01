@@ -5,5 +5,4 @@
 ## Notice
 * Please run deciphering.exe in .\Sketchpad\ciphertext to unlock
 * F5 will help you to return after drawing the image.
-* Can draw a lot of images
 * Press VK_UP and other four keys to move and view the image
