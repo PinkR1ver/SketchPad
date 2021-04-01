@@ -26,7 +26,7 @@ wine deciphering.exe
 ### Draw Interface
 ![Draw Interface](/figs/DrawInterface.jpg)
 * We use visual keyboard to input polynomial funtion to draw its image.
-</br>
+<br></br>
 ![Function Image](/figs/FunctionImage.jpg)
 * It have image memorys and can draw different function images at the same time.
 
